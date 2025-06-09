@@ -1,12 +1,11 @@
 # Criação das classes de modelo para o banco de dados.
 from sqlalchemy import create_engine, Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.orm import declarative_base
-import os
 
 
 # Criação do banco de dados usando SQLAlchemy
 #db = create_engine("sqlite:///tarefas.db")
-db = create_engine("DATABASE_URL")
+db = create_engine("postgresql://postgres:whaXcXWejFweCusbHAvChiIlchXuUxiH@shinkansen.proxy.rlwy.net:19275/railway")
 
 
 # Cria a da base declarativa para os modelos
