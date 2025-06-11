@@ -18,7 +18,7 @@ def criar_token(id_usuario):
 
 
 # Rota de autenticação para login
-@auth_router.get("/login")
+@auth_router.post("/login")
 async def login(email: str, senha: str, session = Depends(pegar_sessao)):
     """
     Rota de autenticação para login.
@@ -39,7 +39,7 @@ async def login(email: str, senha: str, session = Depends(pegar_sessao)):
 
 
 # Rota de autenticação para criar conta
-@auth_router.get("/criar_conta")
+@auth_router.post("/criar_conta")
 async def criar_conta(email: str, senha: str, session = Depends(pegar_sessao)):
     """
     Rota de autenticação para criar uma nova conta.
@@ -56,7 +56,7 @@ async def criar_conta(email: str, senha: str, session = Depends(pegar_sessao)):
 
 
 # Rota de autenticação para logout
-@auth_router.get("/logout")
+@auth_router.post("/logout")
 async def logout():
     """
     Rota de autenticação para logout.
